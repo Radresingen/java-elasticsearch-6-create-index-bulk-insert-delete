@@ -174,9 +174,9 @@ public class ElasticSearchConnector {
 	 * @param dataPath path to the JSON data file 
 	 * @return true if insert was successful, else false
 	 * @throws IOException
-	 * @throws ParseException
+	 * @throws org.json.simple.parser.ParseException
 	 */
-	public boolean bulkInsert( String indexName, String indexType, String dataPath ) throws IOException, ParseException { 
+	public boolean bulkInsert( String indexName, String indexType, String dataPath ) throws IOException, org.json.simple.parser.ParseException {
 		BulkRequestBuilder bulkRequest = client.prepareBulk();
 		
 		JSONParser parser = new JSONParser();
